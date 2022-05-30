@@ -17,10 +17,10 @@
         <td>{{Promotion.designation}}</td>
         <td>{{Promotion.credits}}</td>
         <td>
-            <div *ngIf="Promotion.salary>9000 && Promotion.credits>5">
+            <div *ngIf="Promotion.salary>9000 && Promotion.credits>5; else elseBlock">
                 Eligible
-                <ng-template #elseBlock>Ineligible</ng-template> 
             </div>
+            <ng-template #elseBlock>Ineligible</ng-template> 
         </td>
     </tr>
 </table>
