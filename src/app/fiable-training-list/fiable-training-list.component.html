@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">First name</th>
+            <th scope="col">last name</th>
+            <th scope="col">age</th>
+            <th scope="col">course</th>
+            <th scope="col">qualified</th>
+        </tr>
+    </thead>
+    
+    <tr *ngFor="let tempTrainee of traineeList">
+        <td>{{tempTrainee.firstname}}</td>
+        <td>{{tempTrainee.lastname}}</td>
+        <td>{{tempTrainee.age}}</td>
+        <td>{{tempTrainee.course}}</td>
+        <td>
+            <div *ngIf="tempTrainee.age<50; else elseBlock">
+                YES
+            </div>
+            <ng-template #elseBlock>NO</ng-template>
+        </td>
+    </tr>
+
+</table>

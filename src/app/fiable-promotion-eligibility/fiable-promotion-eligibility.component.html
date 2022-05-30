@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">salary</th>
+            <th scope="col">designation</th>
+            <th scope="col">credit</th>
+            <th scope="col">Eligible for promotion</th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let Promotion of promotion">
+        <td>{{Promotion.id}}</td>
+        <td>{{Promotion.name}}</td>
+        <td>{{Promotion.salary}}</td>
+        <td>{{Promotion.designation}}</td>
+        <td>{{Promotion.credits}}</td>
+        <td>
+            <div *ngIf="Promotion.salary>9000 && Promotion.credits>5">
+                Eligible
+                <ng-template #elseBlock>Ineligible</ng-template> 
+            </div>
+        </td>
+    </tr>
+</table>
