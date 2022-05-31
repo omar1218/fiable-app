@@ -13,7 +13,7 @@
     <tr *ngFor="let Promotion of promotion">
         <td>{{Promotion.id}}</td>
         <td>{{Promotion.name}}</td>
-        <td>{{Promotion.salary}}</td>
+        <td>{{Promotion.salary | currency: 'USD'}}</td>
         <td>{{Promotion.designation}}</td>
         <td>{{Promotion.credits}}</td>
         <td>
