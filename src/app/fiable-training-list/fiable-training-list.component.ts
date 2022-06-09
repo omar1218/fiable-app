@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TraineeService } from './fiable-training-list.service';
 import { Trainee } from './trainee';
 
 @Component({
@@ -8,14 +9,12 @@ import { Trainee } from './trainee';
 })
 export class FiableTrainingListComponent implements OnInit {
 
-    traineeList: Trainee[] = [
-      new Trainee("Omar", "Othman", 30, "angular"),
-      new Trainee("Omar", "Othman", 30, "angular"),
-      new Trainee("Omar", "Othman", 30, "angular"),
-      new Trainee("Omar", "Othman", 3000, "angular")
-    ];
+    traineeList;
 
-  constructor() { }
+  constructor() { 
+    let service = new TraineeService
+    this.traineeList = service.getTrainees();
+  }
 
   ngOnInit(): void {
   }
