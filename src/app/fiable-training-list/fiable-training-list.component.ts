@@ -10,7 +10,14 @@ import { Trainee } from './trainee';
 export class FiableTrainingListComponent implements OnInit {
 
     traineeList;
+    IsActive = true;
 
+    onSave(event:any){
+      console.log("from Fiable...!!!");
+    }
+    onKeyUp(trID:any){
+      console.log(trID);
+    }
   constructor() { 
     let service = new TraineeService
     this.traineeList = service.getTrainees();

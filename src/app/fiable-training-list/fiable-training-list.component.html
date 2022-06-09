@@ -5,7 +5,7 @@
             <th scope="col">last name</th>
             <th scope="col">age</th>
             <th scope="col">course</th>
-            <th scope="col">qualified</th>
+            <th [class.active]="IsActive">qualified</th>
         </tr>
     </thead>
     
@@ -23,3 +23,7 @@
     </tr>
 
 </table>
+
+<button (click)="onSave($event)">Hello there!</button>
+
+<input #trID type="text" (key.enter)="onKeyUp(trID.value)">
