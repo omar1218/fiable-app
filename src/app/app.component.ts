@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sample-title';
+  counterValue = 5;
 }
+

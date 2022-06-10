@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FiableTrainingListComponent } from './fiable-training-list/fiable-training-list.component';
 import { FiablePromotionEligibilityComponent } from './fiable-promotion-eligibility/fiable-promotion-eligibility.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiableTrainingListComponent,
-    FiablePromotionEligibilityComponent
+    FiablePromotionEligibilityComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
