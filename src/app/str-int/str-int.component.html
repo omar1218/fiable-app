@@ -1,0 +1,24 @@
+
+<p>{{message + ''}}</p>
+
+<p innerText="{{message}}"> {{'super'}} </p>
+
+<p>  {{message + '🐈'}} </p>
+128018
+
+<p>{{ getMessage() }}</p>
+
+
+
+<p [innerText]="message"></p>
+<input type="text" [value]="message">
+<p [innerText]="'first'+'second'"></p>
+<p [innerText]="getMessage()"></p>
+
+
+<button (click)="onClick()">click me</button>
+
+<input (keyup)="onKeyUp($event)" >
+
+<h3>Yesterday my mood was - {{mood}}</h3>
+<button (click)=" mood='😊' ">Click me to see my mood..</button>
