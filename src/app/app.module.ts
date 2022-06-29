@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { FiableTraineeListComponent } from './fiable-trainee-list/fiable-trainee-list.component';
 import { StrIntComponent } from './str-int/str-int.component';
@@ -19,6 +18,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { UserComponent } from './components/user/user.component';
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,9 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

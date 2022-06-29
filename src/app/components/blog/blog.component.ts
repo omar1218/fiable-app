@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+  id: number = 0;
+  genders: string[] | undefined;
+  cModes: string[] | undefined;
+
+  submit(userForm: any){
+    console.log("we are testing the submit method", userForm);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    this.genders = ['male', 'female', 'undefined/other'];
+    this.cModes = ['phone', 'email'];
   }
 
 }
