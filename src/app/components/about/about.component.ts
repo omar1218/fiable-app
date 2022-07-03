@@ -15,7 +15,11 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
-      name: new FormControl(''),
+      name: new FormControl('Ramo', [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.pattern('Omar Othman')
+      ]),
       username: new FormControl(''),
       email: new FormControl(''),
       website: new FormControl(''),
